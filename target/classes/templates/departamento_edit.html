@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Departamento</title>
+</head>
+<body>
+    <h1>Editar Departamento</h1>
+    <form action="#" th:action="@{/departamentos/guardar}" th:object="${departamento}" method="post">
+        <label for="id">ID:</label>
+        <input type="text" id="id" th:field="*{id}" readonly /><br/>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" th:field="*{nombre}" /><br/>
+
+        <button type="submit">Actualizar</button>
+    </form>
+    <a href="/departamentos">Volver a la Lista de Departamentos</a>
+</body>
+</html>
